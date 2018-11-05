@@ -56,3 +56,6 @@ config :demosic, Demosic.Repo,
   database: "demosic_dev",
   hostname: "localhost",
   pool_size: 10
+
+#Importing secret configuration
+import_config "dev.secret.exs"

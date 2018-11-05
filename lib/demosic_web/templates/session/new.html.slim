@@ -1,0 +1,12 @@
+h1 Connexion
+= form_for @changeset, @action, fn form ->
+  .form-group
+    = label form, :username, class: "control-label"
+    = text_input form, :username, class: "form-control"
+    = error_tag form, :username 
+  .form-group
+    = label form, :password, class: "control-label"
+    = password_input form, :password, class: "form-control"
+    = error_tag form, :password 
+  .form-group
+    = submit "Envoyer", class: "btn btn-submit"

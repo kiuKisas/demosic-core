@@ -30,3 +30,5 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :template_engines,
   slim: PhoenixSlime.Engine,
   slime: PhoenixSlime.Engine
+
+config :phoenix_slime, :use_slim_extension, true
