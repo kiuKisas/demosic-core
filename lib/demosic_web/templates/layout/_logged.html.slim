@@ -1,0 +1,4 @@
+.float-right
+  p = @user.username
+.float-right
+  = link "Logout", to: session_path(@conn, :delete), method: :delete, class: "button primary"

@@ -26,11 +26,11 @@ defmodule DemosicWeb.Router do
     pipe_through [:browser, :auth] # Use the default browser stack
 
     get "/", HelloController, :index
-
+    #resources "/users", UserController
     # Session
     get "/login", SessionController, :new
-    post "/login", SessionController, :login
-    post "/logout", SessionController, :logout
+    post "/login", SessionController, :create
+    get "/logout", SessionController, :delete
   end
 
   # Scope auth

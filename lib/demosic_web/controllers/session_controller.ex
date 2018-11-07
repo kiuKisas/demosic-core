@@ -5,21 +5,20 @@ defmodule DemosicWeb.SessionController do
   
   def new(conn, _params) do
     changeset = Auth.change_user(%User{})
-    maybe_user = Guardian.Plug.current_resource(conn)
-    if maybe_user do
+    if conn.assigns.current_user do
       redirect(conn, to: "/secret")
     else
-      render(conn, "new.html", changeset: changeset, action: session_path(conn, :login), current_user: maybe_user)
+      render(conn, "new.html", changeset: changeset, action: session_path(conn, :create))
     end
   end
 
-  def login(conn, %{"user" => %{"username" => username, "password" => password}}) do
+  def create(conn, %{"user" => %{"username" => username, "password" => password}}) do
     username
     |> Auth.authenticate_user(password)
     |> login_reply(conn)
   end
 
-  def logout(conn, _) do
+  def delete(conn, _) do
     conn
     |> Guardian.Plug.sign_out()
     |> redirect(to: "/login")

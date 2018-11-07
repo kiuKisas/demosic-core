@@ -45,7 +45,12 @@ defmodule Demosic.Mixfile do
       {:phoenix_slime, "~> 0.10.0"},
       {:guardian, "~> 1.0"},
       {:comeonin, "~> 4.1"},
-      {:bcrypt_elixir, "~> 1.1"}
+      {:bcrypt_elixir, "~> 1.1"},
+      {:membrane_core, "~> 0.1"},
+      {:membrane_element_file, "~> 0.1"},
+      {:membrane_element_portaudio, "~> 0.1"},
+      {:membrane_element_ffmpeg_swresample, "~> 0.1"},
+      {:membrane_element_mad, "~> 0.1"}
     ]
   end
 
