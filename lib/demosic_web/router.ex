@@ -38,6 +38,7 @@ defmodule DemosicWeb.Router do
     pipe_through [:browser, :auth, :ensure_auth]
 
     get "/secret", HelloController, :secret
+    resources "/music", MusicController, only: [:index, :create]
   end 
 
   # Other scopes may use custom stacks.

@@ -8,7 +8,12 @@ defmodule DemosicWeb.SessionController do
     if conn.assigns.current_user do
       redirect(conn, to: "/secret")
     else
-      render(conn, "new.html", changeset: changeset, action: session_path(conn, :create))
+      render(
+        conn,
+        "new.html",
+        changeset: changeset,
+        action: session_path(conn, :create)
+      )
     end
   end
 

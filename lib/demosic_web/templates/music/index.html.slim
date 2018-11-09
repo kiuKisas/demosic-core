@@ -1,0 +1,4 @@
+h1 = "Musics - #{length_string(@musics)}"
+ul
+  = for music <- @musics do
+    = render(DemosicWeb.MusicView, "_music.html", conn: @conn, music: music, changeset: @changeset, action: @action)

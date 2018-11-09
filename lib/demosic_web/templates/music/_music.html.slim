@@ -1,0 +1,5 @@
+li
+  = form_for @changeset, @action, fn form ->
+    = hidden_input form, :id , value: @music.id 
+    = submit @music.path, class: "btn btn-submit"
+  
