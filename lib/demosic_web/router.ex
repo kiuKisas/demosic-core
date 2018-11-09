@@ -39,6 +39,7 @@ defmodule DemosicWeb.Router do
 
     get "/secret", HelloController, :secret
     resources "/music", MusicController, only: [:index, :create]
+    resources "/player", PlayerController, only: [:create, :delete]
   end 
 
   # Other scopes may use custom stacks.

@@ -46,7 +46,7 @@ defmodule Demosic.Mixfile do
       {:guardian, "~> 1.0"},
       {:comeonin, "~> 4.1"},
       {:bcrypt_elixir, "~> 1.1"},
-      {:membrane_core, "~> 0.1"},
+      {:membrane_core, "~> 0.2"},
       {:membrane_element_file, "~> 0.1"},
       {:membrane_element_portaudio, "~> 0.1"},
       {:membrane_element_ffmpeg_swresample, "~> 0.1"},
