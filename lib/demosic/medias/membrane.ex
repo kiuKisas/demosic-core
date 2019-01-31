@@ -31,6 +31,5 @@ defmodule Demosic.Medias.Membrane do
       {:decoder, :output} => {:converter, :input},
       {:converter, :output} => {:sink, :input}
     }
-
   end
 end

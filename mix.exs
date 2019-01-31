@@ -50,7 +50,8 @@ defmodule Demosic.Mixfile do
       {:membrane_element_file, "~> 0.1"},
       {:membrane_element_portaudio, "~> 0.1"},
       {:membrane_element_ffmpeg_swresample, "~> 0.1"},
-      {:membrane_element_mad, "~> 0.1"}
+      {:membrane_element_mad, "~> 0.1"},
+      {:membrane_cli, git: "https://github.com/membraneframework/membrane-cli.git", only: :dev}
     ]
   end
 
